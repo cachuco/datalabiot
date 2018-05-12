@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/xenial64"
-  config.disksize.size = "100GB"
+  config.disksize.size = "35GB"
   config.vm.provision "shell", inline: $deployscript
 
   # Disable automatic box update checking. If you disable this, then
