@@ -1,7 +1,8 @@
 # Master Datalab IoT
-## Universidad de Cantabria (Mayo de 2018)
 ### César González
+### Universidad de Cantabria (Mayo de 2018)
 
+### Contenido
 Este repositorio contiene la plataforma de desarrollo con la que seguir los ejemplos prácticos que veremos en las clases.
 
 La plataforma contiene los siguientes componentes principales:
