@@ -1,0 +1,29 @@
+{
+  "name": "replaygpx",
+  "version": "1.0.0",
+  "description": "Send points in gpx file to a mqtt broker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesarbits/datalabiot.git"
+  },
+  "keywords": [
+    "iot",
+    "platform",
+    "bigdata"
+  ],
+  "author": "César González",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cesarbits/datalabiot/issues"
+  },
+  "homepage": "https://github.com/cesarbits/datalabiot#readme",
+  "dependencies": {
+    "gpx2js": "^0.1.0",
+    "mqtt": "^2.18.0"
+  }
+}

@@ -5,9 +5,9 @@ services:
     ports:
     - 3000:3000/tcp
     environment:
-    - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    - GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-worldmap-panel
   nodered:
-    image: nodered/node-red-docker
+    build: nodered
     ports:
     - 1880:1880/tcp
   influxdb:
@@ -16,3 +16,17 @@ services:
     - /var/lib/influxdb
     ports:
     - 8086:8086/tcp
+  mosquitto:
+    image: toke/mosquitto
+    ports:
+    - 1883:1883/tcp
+    - 9001:9001/tcp
+  freeboard:
+    build: ./freeboard
+    ports:
+    - 8080:8080/tcp
+  replaygpx:
+    build: ./replaygpx
+    environment:
+    - MQTT_BROKER=mqtt://mosquitto
+    - DEVICEID=vehicle1

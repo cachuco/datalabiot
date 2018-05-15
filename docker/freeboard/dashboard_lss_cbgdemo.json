@@ -1,0 +1,57 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Ruta en bici por Santander",
+			"width": 1,
+			"row": {
+				"2": 5,
+				"3": 1
+			},
+			"col": {
+				"2": 2,
+				"3": -10
+			},
+			"col_width": "3",
+			"widgets": [
+				{
+					"type": "google_map",
+					"settings": {
+						"lat": "datasources[\"demo_datalabiot\"][\"msg\"][\"latitude\"]",
+						"lon": "datasources[\"demo_datalabiot\"][\"msg\"][\"longitude\"]"
+					}
+				},
+				{
+					"type": "text_widget",
+					"settings": {
+						"title": "Elevation",
+						"size": "regular",
+						"value": "datasources[\"demo_datalabiot\"][\"msg\"][\"elevation\"]",
+						"sparkline": true,
+						"animate": true,
+						"units": "m"
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "demo_datalabiot",
+			"type": "paho_mqtt",
+			"settings": {
+				"server": "localhost",
+				"port": 9001,
+				"use_ssl": false,
+				"client_id": "",
+				"username": "",
+				"password": "",
+				"topic": "v1.devices.location",
+				"json_data": true
+			}
+		}
+	],
+	"columns": 3
+}
