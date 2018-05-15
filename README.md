@@ -19,6 +19,8 @@ Se requiere tener instalado [Vagrant](https://www.vagrantup.com/downloads.html) 
 
 ## Despliegue
 
+```shell
 git clone https://github.com/cesarbits/datalabiot
 cd datalabiot
 vagrant up
+```
