@@ -26,3 +26,11 @@ git clone https://github.com/cesarbits/datalabiot
 cd datalabiot
 vagrant up
 ```
+
+Mapa de puertos y servicios de la máquina virtual generada
+
+*Mosquitto* 9001 websockets y 1883 MQTT
+*NodeRed*  1880
+*InfluxDb* 8086
+*Grafana* 3000
+*Freeboard* 8080
