@@ -1,6 +1,6 @@
 # Master Datalab IoT
-### César González
-### Universidad de Cantabria (Mayo de 2018)
+César González
+Universidad de Cantabria (Mayo de 2018)
 
 
 
