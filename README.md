@@ -27,6 +27,19 @@ cd datalabiot
 vagrant up
 ```
 
+Una vez tengamos la VM arrancada, accedemos a la shell:
+
+```
+$vagrant ssh
+```
+
+y arrancamos los servicios:
+
+```
+cd /docker
+sudo docker-compose up
+```
+
 Mapa de puertos y servicios de la máquina virtual generada
 
 ```
