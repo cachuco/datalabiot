@@ -8,7 +8,6 @@
 
 $deployscript = <<-SCRIPT
 echo Provisioning environment...
-sudo apt-get remove docker docker-engine docker.io
 sudo apt-get update
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -16,10 +15,11 @@ sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get update
 sudo apt-get -y install docker-ce docker-compose git
-cd
-git clone https://github.com/cesarbits/datalabiot
-cd datalabiot/docker
+cd /docker
 sudo docker-compose build
+sudo docker-compose pull
+sudo cp startiot /etc/init.d
+update-rc.d startiot defaults
 SCRIPT
 
 
@@ -62,6 +62,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "./docker", "/docker"
+  #config.vm.provision "file", source: "./startiot", destination: "/etc/init.d/startiot"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

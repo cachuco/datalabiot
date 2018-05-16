@@ -23,4 +23,4 @@ client.on('connect', function () {
           setTimeout(send_tb, 1000*index, telemetry);
         }
       });
-})
+});
