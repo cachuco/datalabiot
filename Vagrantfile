@@ -46,6 +46,7 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 1880, host: 1880 # nodered
   config.vm.network "forwarded_port", guest: 8086, host: 8086 # influxdb
   config.vm.network "forwarded_port", guest: 9001, host: 9001 # mosquitto
+  config.vm.network "forwarded_port", guest: 1883, host: 1883 # mosquitto
   config.vm.network "forwarded_port", guest: 8080, host: 8080 # freeboard
 
   # Create a private network, which allows host-only access to the machine

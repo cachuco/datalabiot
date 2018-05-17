@@ -16,6 +16,8 @@ services:
     - /var/lib/influxdb
     ports:
     - 8086:8086/tcp
+    environment:
+    - INFLUXDB_DB=masterUC
   mosquitto:
     image: toke/mosquitto
     ports:
